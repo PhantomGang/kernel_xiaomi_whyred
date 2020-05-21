@@ -51,12 +51,7 @@ config QCACLD_FEATURE_GREEN_AP
 	default n
 
 config QCACLD_FEATURE_METERING
-<<<<<<< HEAD
-	bool "Enable metering feature"
-=======
 	bool "Enable feature metering"
->>>>>>> f613e538a9e6... qcacld: fix an inconsistency between userspace and kernel options
-	default n
 
 config HELIUMPLUS
 	bool "Enable Beeliner based descriptor structures for Helium"

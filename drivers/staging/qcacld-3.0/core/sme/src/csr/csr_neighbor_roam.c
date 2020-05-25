@@ -1049,20 +1049,18 @@ static void csr_neighbor_roam_info_ctx_init(
 		} else
 #endif
 		{
+		if (!ngbr_roam_info->b_roam_scan_offload_started)
 			csr_roam_offload_scan(pMac, session_id,
 				ROAM_SCAN_OFFLOAD_START,
 				REASON_CTX_INIT);
 
-			if (session->pCurRoamProfile &&
-				 session->pCurRoamProfile->do_not_roam) {
-				sme_debug("Supplicant disabled driver roaming");
+		else
 				csr_roam_offload_scan(pMac, session_id,
 					ROAM_SCAN_OFFLOAD_STOP,
 					REASON_SUPPLICANT_DISABLED_ROAMING);
 			}
 		}
 	}
-}
 
 /**
  * csr_neighbor_roam_indicate_connect()
